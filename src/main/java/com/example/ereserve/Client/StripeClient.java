@@ -8,9 +8,9 @@ import java.util.HashMap;
 import java.util.Map;
 @Component
 public class StripeClient {
-    @Autowired
+
     StripeClient() {
-        Stripe.apiKey = "";
+        Stripe.apiKey = "sk_test_51Q0JBGKRZ1jB7FLU2vxoZZnHLA6MJkRAGUGs6ec7MFaDMPEG9yQswXSvlqYzL4TvTYRlfp1R4YrTqoP108X2ITiq00y7CB4WEa";
     }
     public Customer createCustomer(String token, String email) throws Exception {
         Map<String, Object> customerParams = new HashMap<String, Object>();
