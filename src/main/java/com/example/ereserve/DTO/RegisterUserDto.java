@@ -1,32 +1,23 @@
 package com.example.ereserve.DTO;
 
-import com.example.ereserve.Entity.Contract;
-import com.example.ereserve.Entity.RoleType;
+import java.time.LocalDate;
 
 public class RegisterUserDto {
-    private String email;
-
-    private String password;
-
     private String fullName;
-    private RoleType role;
-    private Contract contract;
-    // getters and setters here...
+    private String email;
+    private String password;
+    private String role;
+    private LocalDate contractStart;
+    private LocalDate contractEnd;
 
-    public RoleType getRole() {
-        return role;
+    // Getters et Setters
+
+    public String getFullName() {
+        return fullName;
     }
 
-    public Contract getContract() {
-        return contract;
-    }
-
-    public void setContract(Contract contract) {
-        this.contract = contract;
-    }
-
-    public void setRole(RoleType role) {
-        this.role = role;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
     public String getEmail() {
@@ -45,13 +36,27 @@ public class RegisterUserDto {
         this.password = password;
     }
 
-    public String getFullName() {
-        return fullName;
+    public String getRole() {
+        return role;
     }
 
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
+    public void setRole(String role) {
+        this.role = role;
     }
 
+    public LocalDate getContractStart() {
+        return contractStart;
+    }
 
+    public void setContractStart(LocalDate contractStart) {
+        this.contractStart = contractStart;
+    }
+
+    public LocalDate getContractEnd() {
+        return contractEnd;
+    }
+
+    public void setContractEnd(LocalDate contractEnd) {
+        this.contractEnd = contractEnd;
+    }
 }

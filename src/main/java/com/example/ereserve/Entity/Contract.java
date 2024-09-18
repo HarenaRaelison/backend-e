@@ -1,7 +1,7 @@
 package com.example.ereserve.Entity;
 
 import jakarta.persistence.*;
-import java.util.Date;
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "contracts")
@@ -12,11 +12,12 @@ public class Contract {
     private Long id;
 
     @Column(nullable = false)
-    private Date start;
+    private LocalDate start;
 
     @Column(name = "end_date", nullable = false)
-    private Date endDate;
+    private LocalDate endDate;
 
+    // Getters et Setters
     public Long getId() {
         return id;
     }
@@ -25,21 +26,19 @@ public class Contract {
         this.id = id;
     }
 
-    public Date getStart() {
+    public LocalDate getStart() {
         return start;
     }
 
-    public void setStart(Date start) {
+    public void setStart(LocalDate start) {
         this.start = start;
     }
 
-    public Date getEndDate() {
+    public LocalDate getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDate endDate) {
         this.endDate = endDate;
     }
-
-    // Getters et Setters
 }

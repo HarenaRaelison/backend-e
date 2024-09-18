@@ -1,8 +1,8 @@
 package com.example.ereserve.Entity;
 
-import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import jakarta.persistence.*;
 import java.util.Collection;
 
 @Entity
@@ -14,7 +14,7 @@ public class User implements UserDetails {
     private Long id;
 
     @Column(nullable = false)
-    private String fullName; // New field for full name
+    private String fullName;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -30,8 +30,7 @@ public class User implements UserDetails {
     @JoinColumn(name = "contract_id", nullable = true)
     private Contract contract;
 
-    // Getters and setters
-
+    // Getters et Setters
     public Long getId() {
         return id;
     }
@@ -82,12 +81,12 @@ public class User implements UserDetails {
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return null; // Vous pouvez gérer ici les rôles/granted authorities
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return this.email; // Utilisation de l'email comme nom d'utilisateur
     }
 
     @Override
@@ -109,5 +108,4 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
-
 }
