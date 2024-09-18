@@ -1,9 +1,11 @@
 package com.example.ereserve.Services.implement;
 
+import com.example.ereserve.Entity.RoleType;
 import com.example.ereserve.Entity.User;
 import com.example.ereserve.Repository.UserRepository;
 import com.example.ereserve.Services.Interface.UserService;
 import lombok.AllArgsConstructor;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,13 +35,33 @@ public class UserServiceImpl implements UserService {
 
             return userRepository.save(existingUser);
         } else {
-            // Handle the case where the user is not found (return null or throw an exception)
-            return null;
+            // Gérer le cas où l'utilisateur n'est pas trouvé (par exemple, lancer une exception)
+            throw new RuntimeException("Utilisateur non trouvé");
         }
     }
 
     @Override
+    public User registerUser(OAuth2User oAuth2User) {
+        String email = oAuth2User.getAttribute("email");
+        String fullName = oAuth2User.getAttribute("name");
+
+        // Vérifie si l'utilisateur existe déjà dans la base de données
+        Optional<User> existingUserOptional = userRepository.findByEmail(email);
+        if (existingUserOptional.isPresent()) {
+            return existingUserOptional.get(); // Retourne l'utilisateur existant
+        }
+
+        // Si l'utilisateur n'existe pas, créer un nouvel utilisateur
+        User newUser = new User();
+        newUser.setEmail(email);
+        newUser.setFullName(fullName);
+        newUser.setRole(RoleType.CLIENT);  // Assigne le rôle CLIENT par défaut
+        return userRepository.save(newUser);
+    }
+
+    @Override
     public String deleteUpdate(Long idUser) {
+        // Implement delete logic if needed
         return null;
     }
 
@@ -47,6 +69,4 @@ public class UserServiceImpl implements UserService {
     public List<User> findAllUsers() {
         return userRepository.findAll();
     }
-
-
 }

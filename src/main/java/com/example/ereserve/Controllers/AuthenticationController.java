@@ -9,6 +9,9 @@ import com.example.ereserve.Services.implement.JwtService;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.oauth2.core.user.OAuth2User;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +29,14 @@ public class AuthenticationController {
         this.authenticationService = authenticationService;
     }
 
+    // Inscription d'utilisateur
     @PostMapping("/signup")
     public ResponseEntity<User> register(@RequestBody RegisterUserDto registerUserDto) {
         User registeredUser = authenticationService.signup(registerUserDto);
         return ResponseEntity.ok(registeredUser);
     }
 
+    // Connexion utilisateur avec JWT
     @PostMapping("/login")
     public ResponseEntity<LoginResponse> authenticate(
             @RequestBody LoginUserDto loginUserDto,
@@ -49,12 +54,14 @@ public class AuthenticationController {
         loginResponse.setExpiresIn(jwtService.getExpirationTime());
         loginResponse.setUserId(authenticatedUser.getId());
         loginResponse.setRoleUser(String.valueOf(authenticatedUser.getRole()));
-        // Crée un cookie avec le token JWT
 
-        // Ajoute le cookie à la réponse
 
 
         // Retourne la réponse avec le token et le temps d'expiration
         return ResponseEntity.ok(loginResponse);
-      }
+    }
+
+    // Gestion du succès de la connexion via Google OAuth2
+
+
 }
