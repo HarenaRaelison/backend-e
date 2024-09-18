@@ -5,13 +5,85 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e55690fa-10b1-4d14-a1b4-c07c56452a38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/PaymentGatewayController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/StripeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/com/example/ereserve/EreserveApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Client/StripeClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Client/StripeClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/ReservationEventController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/ReservationEventController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Client/StripeClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Client/StripeClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/ApplicationConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/ApplicationConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/PasswordConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/PasswordConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/WebConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Config/WebConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ContractController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ContractController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/EvenementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/EvenementController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/OAuth2CallbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/OAuth2CallbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/OAuth2Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/OAuth2Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/PayementEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/PayementEventController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ReservationEventController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ReservationEventController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ReservationTransController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ReservationTransController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/RoleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/RoleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ServiceReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/ServiceReservationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/TransportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/TransportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Controllers/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/LoginResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/LoginUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/LoginUserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/RegisterUserDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/DTO/RegisterUserDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/CategorieEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/CategorieEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/CategorieTrans.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/CategorieTrans.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Contract.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Contract.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/EvenementReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/EvenementReservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/PaymentEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/PaymentEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/PaymentTrans.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/PaymentTrans.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ReservationEvent.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ReservationEvent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ReservationTrans.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ReservationTrans.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/RoleType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/RoleType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ServiceReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/ServiceReservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/TransportReservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/TransportReservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Type_Billet_Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Type_Billet_Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Type_Billet_Trans.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/Type_Billet_Trans.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/EreserveApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/EreserveApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/GlobalExceptionHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/GlobalExceptionHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Handler/OAuth2LoginSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Handler/OAuth2LoginSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ContractRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ContractRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/EvenementRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/EvenementRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/PayementEventRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/PayementEventRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ReservationEventRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ReservationEventRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ReservationTransRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ReservationTransRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/RoleRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ServiceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/ServiceRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/TransportRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/TransportRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/billetEventRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/billetEventRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/billetTransRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Repository/billetTransRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/EvenementService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/EvenementService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/PayementEventService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/PayementEventService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ReservationEventService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ReservationEventService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ReservationTransService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ReservationTransService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ServiceReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/ServiceReservationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/TransportService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/TransportService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/billetEventService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/billetEventService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/billetTransService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/Interface/billetTransService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ContractServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ContractServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/EvenementServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/EvenementServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/JwtService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/MyUserDetailsService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/MyUserDetailsService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/PayementEventServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/PayementEventServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ReservationEventServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ReservationEventServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ReservationTransServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ReservationTransServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/RoleServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/RoleServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ServiceReservationServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/ServiceReservationServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/TransportServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/TransportServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/UserServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/billetEventServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/billetEventServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/billetTransServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/ereserve/Services/implement/billetTransServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +140,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "harena",
+    "git-widget-placeholder": "Merging harena",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "D:/backend-e",
     "node.js.detected.package.eslint": "true",
@@ -179,7 +251,7 @@
       <workItem from="1726551117947" duration="4271000" />
       <workItem from="1726635483411" duration="10906000" />
       <workItem from="1726655065623" duration="24000" />
-      <workItem from="1726655221693" duration="8196000" />
+      <workItem from="1726655221693" duration="8582000" />
     </task>
     <servers />
   </component>
