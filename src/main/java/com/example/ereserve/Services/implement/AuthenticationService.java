@@ -3,9 +3,11 @@ package com.example.ereserve.Services.implement;
 import com.example.ereserve.DTO.RegisterUserDto;
 import com.example.ereserve.DTO.LoginUserDto;
 import com.example.ereserve.Entity.RoleType;
+import com.example.ereserve.Entity.ServiceReservation;
 import com.example.ereserve.Entity.User;
 import com.example.ereserve.Entity.Contract;
 import com.example.ereserve.Repository.ContractRepository;
+import com.example.ereserve.Repository.ServiceRepository;
 import com.example.ereserve.Repository.UserRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -25,7 +27,7 @@ public class AuthenticationService {
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
     private final ContractRepository contractRepository;
-
+    private final ServiceRepository serviceRepository;
     // Méthode pour l'inscription des utilisateurs
     public User signup(RegisterUserDto input) {
         // Vérifier si un utilisateur avec cet email existe déjà
@@ -33,30 +35,43 @@ public class AuthenticationService {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Email already in use");
         }
 
+        // Création de l'utilisateur
         User user = new User();
         user.setFullName(input.getFullName());
         user.setEmail(input.getEmail());
         user.setPassword(passwordEncoder.encode(input.getPassword())); // Encodage sécurisé du mot de passe
 
-        try {
-            // Vérification du rôle avec prise en charge des rôles insensibles à la casse
-            RoleType role = input.getRole() != null ? RoleType.valueOf(input.getRole().toUpperCase()) : RoleType.CLIENT;
-            user.setRole(role);
-            // Si le rôle est ADMIN, ajouter un contrat
-            if (role == RoleType.ADMIN) {
-                Contract contract = new Contract();
-                contract.setStart(input.getContractStart());
-                contract.setEndDate(input.getContractEnd());
-                // Sauvegarder le contrat avant de l'associer à l'utilisateur
-                contractRepository.save(contract);
-                user.setContract(contract);
-            }
-        } catch (IllegalArgumentException e) {
-            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Invalid role");
-        }
+        // Détermination du rôle avec prise en charge des rôles insensibles à la casse
+        RoleType role = input.getRole() != null ? RoleType.valueOf(input.getRole().toUpperCase()) : RoleType.CLIENT;
+        user.setRole(role);
 
         // Sauvegarder l'utilisateur dans la base de données
-        return userRepository.save(user);
+        User savedUser = userRepository.save(user);
+
+        // Gestion des rôles après la sauvegarde de l'utilisateur
+        if (role == RoleType.ADMIN) {
+            // Créer et sauvegarder le contrat
+            Contract contract = new Contract();
+            contract.setStart(input.getContractStart());
+            contract.setEndDate(input.getContractEnd());
+            contractRepository.save(contract);
+
+            // Associer le contrat à l'utilisateur
+            savedUser.setContract(contract);
+            userRepository.save(savedUser);  // Mettre à jour l'utilisateur avec le contrat
+            // Créer et sauvegarder un ServiceReservation pour l'utilisateur ADMIN
+            ServiceReservation serviceReservation = new ServiceReservation();
+            serviceReservation.setUser(savedUser);  // Associer l'utilisateur au ServiceReservation
+            serviceRepository.save(serviceReservation);
+        }
+
+        // Aucun contrat ou ServiceReservation pour SUPERADMIN ou CLIENT
+        if (role == RoleType.SUPERADMIN || role == RoleType.CLIENT) {
+            savedUser.setContract(null);  // Aucun contrat pour SUPERADMIN ou CLIENT
+            userRepository.save(savedUser);  // Mettre à jour l'utilisateur si nécessaire
+        }
+
+        return savedUser;
     }
 
     // Méthode pour gérer l'authentification des utilisateurs

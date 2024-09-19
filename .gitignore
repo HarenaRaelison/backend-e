@@ -1,0 +1,14 @@
+# Ignorer les fichiers de configuration sensibles
+src/main/resources/application.properties
+target/classes/application.properties
+
+# Ignorer les fichiers générés et les répertoires
+target/
+*.class
+
+# Ignorer les fichiers de configuration IDE
+.idea/
+*.iml
+
+# Ignorer les fichiers de log
+*.log
