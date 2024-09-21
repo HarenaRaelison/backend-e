@@ -1,12 +1,12 @@
 package com.example.ereserve.Entity;
 
 import jakarta.persistence.*;
-import java.util.Date;
-import java.util.List;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @Table(name = "transport_reservation")
-public class  TransportReservation {
+public class TransportReservation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,24 +15,19 @@ public class  TransportReservation {
     @Column(nullable = false, length = 50)
     private String name;
 
-    @Column(name = "lieu_depart", nullable = false)
+    @Column(name = "lieuDepart", nullable = false)
     private String lieuDepart;
 
-    @Column(name = "image_path")
-    private String imagePath;
-
-    @Column(name = "lieu_arriver", nullable = false)
+    @Column(name = "lieuArriver", nullable = false)
     private String lieuArriver;
 
-    @Temporal(TemporalType.DATE)
-    @Column(name = "date_depart", nullable = false)
-    private Date dateDepart;
+    @Column(name = "dateDepart", nullable = false)
+    private LocalDate dateDepart;
 
-    @Temporal(TemporalType.TIME)
-    @Column(name = "heure_depart", nullable = false)
-    private Date heureDepart;
+    @Column(name = "heureDepart", nullable = false)
+    private LocalTime heureDepart;
 
-    @Column(name = "nombre_place", nullable = false)
+    @Column(name = "nombrePlace", nullable = false)
     private int nombrePlace;
 
     @Column(nullable = false)
@@ -44,10 +39,7 @@ public class  TransportReservation {
 
     @ManyToOne
     @JoinColumn(name = "service_id", nullable = false)
-    private ServiceReservation serviceReservation;
-
-    @OneToMany(mappedBy = "transportReservation")
-    private List<Type_Billet_Trans> typeBillets;
+    private ServiceReservation serviceId;
 
     // Getters and Setters
 
@@ -75,14 +67,6 @@ public class  TransportReservation {
         this.lieuDepart = lieuDepart;
     }
 
-    public String getImagePath() {
-        return imagePath;
-    }
-
-    public void setImagePath(String imagePath) {
-        this.imagePath = imagePath;
-    }
-
     public String getLieuArriver() {
         return lieuArriver;
     }
@@ -91,19 +75,19 @@ public class  TransportReservation {
         this.lieuArriver = lieuArriver;
     }
 
-    public Date getDateDepart() {
+    public LocalDate getDateDepart() {
         return dateDepart;
     }
 
-    public void setDateDepart(Date dateDepart) {
+    public void setDateDepart(LocalDate dateDepart) {
         this.dateDepart = dateDepart;
     }
 
-    public Date getHeureDepart() {
+    public LocalTime getHeureDepart() {
         return heureDepart;
     }
 
-    public void setHeureDepart(Date heureDepart) {
+    public void setHeureDepart(LocalTime heureDepart) {
         this.heureDepart = heureDepart;
     }
 
@@ -131,20 +115,12 @@ public class  TransportReservation {
         this.categorie = categorie;
     }
 
-    public ServiceReservation getServiceReservation() {
-        return serviceReservation;
+    public ServiceReservation getServiceId() {
+        return serviceId;
     }
 
-    public void setServiceReservation(ServiceReservation serviceReservation) {
-        this.serviceReservation = serviceReservation;
-    }
-
-    public List<Type_Billet_Trans> getTypeBillets() {
-        return typeBillets;
-    }
-
-    public void setTypeBillets(List<Type_Billet_Trans> typeBillets) {
-        this.typeBillets = typeBillets;
+    public void setServiceId(ServiceReservation serviceId) {
+        this.serviceId = serviceId;
     }
 }
 

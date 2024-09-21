@@ -1,6 +1,5 @@
 package com.example.ereserve.Entity;
 
-import com.example.ereserve.Entity.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -24,6 +23,7 @@ public class ServiceReservation {
     public void setId(Long id) {
         this.id = id;
     }
+
 
     public User getUser() {
         return user;
