@@ -10,7 +10,7 @@ public interface UserService {
     User updateUser(Long idUser,User user);
 
     User registerUser(OAuth2User oAuth2User);
-
+    User findById(Long idUser);
     String deleteUpdate(Long idUser);
     List<User> findAllUsers();
 }

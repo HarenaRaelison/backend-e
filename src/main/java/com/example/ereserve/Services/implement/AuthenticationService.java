@@ -70,7 +70,6 @@ public class AuthenticationService {
             savedUser.setContract(null);  // Aucun contrat pour SUPERADMIN ou CLIENT
             userRepository.save(savedUser);  // Mettre à jour l'utilisateur si nécessaire
         }
-
         return savedUser;
     }
 

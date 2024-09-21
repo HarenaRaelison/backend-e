@@ -23,4 +23,9 @@ public final ServiceRepository serviceRepository;
         serviceRepository.deleteById(idService);
         return "deleted succesfully";
     }
+
+    @Override
+    public ServiceReservation getServiceByUserId(Long userId) {
+        return serviceRepository.findServiceByUserId(userId);
+    }
 }

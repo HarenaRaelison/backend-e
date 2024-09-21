@@ -25,4 +25,13 @@ public class ServiceReservationController {
         String result = serviceReservationService.deleteService(id);
         return new ResponseEntity<>(result, HttpStatus.OK);
     }
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<ServiceReservation> getServiceIdByUserId(@PathVariable Long userId) {
+        ServiceReservation service = serviceReservationService.getServiceByUserId(userId);
+        if (service != null) {
+            return new ResponseEntity<>(service, HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+    }
 }
