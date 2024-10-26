@@ -23,8 +23,7 @@ public class ReservationTransServiceImpl implements ReservationTransService {
                         p -> {
                             p.setTransportReservation(p.getTransportReservation());
                             p.setUser(p.getUser());
-                            p.setMontantTotal(p.getMontantTotal());
-                            p.setNombrePlacesReservees(p.getNombrePlacesReservees());
+
                             p.setStatus(p.isStatus());
                             return reservationTransRepository.save(p);
                         }
