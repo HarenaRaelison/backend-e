@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequestMapping("/api/admin/transport")
 @AllArgsConstructor
@@ -37,10 +37,8 @@ public class TransportController {
                     t.setLieuDepart(t.getLieuDepart());
                     t.setName(t.getName());
                     t.setLieuArriver(t.getLieuArriver());
-
                     t.setDateDepart(t.getDateDepart());
                     t.setCategorie(t.getCategorie());
-
                     t.setHeureDepart(t.getHeureDepart());
                     TransportReservation updatedTransport = transportRepository.save(t);
                     return ResponseEntity.ok(updatedTransport);

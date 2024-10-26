@@ -5,7 +5,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
+
+import java.util.Arrays;
 
 @Configuration
 public class WebConfig {
@@ -14,11 +15,11 @@ public class WebConfig {
     public CorsFilter corsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         CorsConfiguration config = new CorsConfiguration();
-        config.setAllowCredentials(true);
-        config.addAllowedOrigin("http://localhost:5173/");
-        config.addAllowedHeader("*");
-        config.addAllowedMethod("*");
-        source.registerCorsConfiguration("/**", config);
+        config.setAllowCredentials(true);  // Autoriser les credentials (cookies JWT, etc.)
+        config.setAllowedOrigins(Arrays.asList("http://localhost:5173"));  // Ajouter d'autres environnements ici
+        config.setAllowedHeaders(Arrays.asList("Authorization", "Cache-Control", "Content-Type"));
+        config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
+        source.registerCorsConfiguration("/**", config);  // Appliquer la configuration CORS à toutes les routes
         return new CorsFilter(source);
     }
 }

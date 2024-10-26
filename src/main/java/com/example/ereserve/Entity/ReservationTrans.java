@@ -2,6 +2,7 @@ package com.example.ereserve.Entity;
 
 import jakarta.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Table(name = "reservations_trans")
@@ -19,21 +20,16 @@ public class ReservationTrans {
     @JoinColumn(name = "trans_id", nullable = false)
     private TransportReservation transportReservation;
 
-    @ManyToOne
-    @JoinColumn(name = "type_billet_trans_id", nullable = false)
-    private Type_Billet_Trans typeBilletTrans;
+    @OneToMany(mappedBy = "reservationTrans", cascade = CascadeType.ALL)
+    private List<SoldSeatTrans> soldSeats;
 
-    @Column(name = "nombre_places_reservees", nullable = false)
-    private int nombrePlacesReservees;
-
-    @Column(name = "montant_total", nullable = false, precision = 10, scale = 2)
-    private BigDecimal montantTotal;
 
     @Column(nullable = false)
     private boolean status;
 
-    @Column(length = 30, nullable = false)
-    private String statut = "en attente";
+
+
+
 
     // Getters and Setters
 
@@ -61,29 +57,8 @@ public class ReservationTrans {
         this.transportReservation = transportReservation;
     }
 
-    public Type_Billet_Trans getTypeBilletTrans() {
-        return typeBilletTrans;
-    }
 
-    public void setTypeBilletTrans(Type_Billet_Trans typeBilletTrans) {
-        this.typeBilletTrans = typeBilletTrans;
-    }
 
-    public int getNombrePlacesReservees() {
-        return nombrePlacesReservees;
-    }
-
-    public void setNombrePlacesReservees(int nombrePlacesReservees) {
-        this.nombrePlacesReservees = nombrePlacesReservees;
-    }
-
-    public BigDecimal getMontantTotal() {
-        return montantTotal;
-    }
-
-    public void setMontantTotal(BigDecimal montantTotal) {
-        this.montantTotal = montantTotal;
-    }
 
     public boolean isStatus() {
         return status;
@@ -93,11 +68,11 @@ public class ReservationTrans {
         this.status = status;
     }
 
-    public String getStatut() {
-        return statut;
+    public List<SoldSeatTrans> getSoldSeats() {
+        return soldSeats;
     }
 
-    public void setStatut(String statut) {
-        this.statut = statut;
+    public void setSoldSeats(List<SoldSeatTrans> soldSeats) {
+        this.soldSeats = soldSeats;
     }
 }
