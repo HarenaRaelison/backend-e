@@ -28,7 +28,7 @@ public class SecurityConfig {
                         .anyRequest().authenticated()  // Require authentication for all other routes
                 )
                 .oauth2Login(oauth2 -> oauth2
-                        .defaultSuccessUrl("http://localhost:5173/events")  // Redirect to this URL after successful login
+                        .defaultSuccessUrl("http://localhost:5173/transports")  // Redirect to this URL after successful login
                 )
                 .logout(logout -> logout
                         .logoutUrl("/logout")  // URL to log out the user
