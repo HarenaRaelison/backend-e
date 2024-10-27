@@ -27,7 +27,7 @@ public class OAuth2Controller {
     public ResponseEntity<?> handleOAuth2Success() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        // Verify if authentication is OAuth2AuthenticationToken
+        // Vérifie si l'authentification est OAuth2AuthenticationToken
         if (authentication != null && authentication.isAuthenticated() && authentication instanceof OAuth2AuthenticationToken) {
             OAuth2AuthenticationToken oauthToken = (OAuth2AuthenticationToken) authentication;
             OAuth2User oauthUser = oauthToken.getPrincipal();
@@ -35,11 +35,11 @@ public class OAuth2Controller {
             String name = oauthUser.getAttribute("name");
             String email = oauthUser.getAttribute("email");
 
-            // Check if the user exists in the database
+            // Vérifie si l'utilisateur existe dans la base de données
             Optional<User> existingUser = userRepository.findByEmail(email);
             User user;
             if (existingUser.isEmpty()) {
-                // Create a new user with CLIENT role
+                // Crée un nouvel utilisateur avec le rôle CLIENT
                 user = new User();
                 user.setEmail(email);
                 user.setFullName(name);
@@ -50,10 +50,10 @@ public class OAuth2Controller {
                 user = existingUser.get();
             }
 
-            return ResponseEntity.ok(user);  // Return the user object with HTTP 200 status
+            return ResponseEntity.ok(user);  // Renvoie l'objet utilisateur avec le statut HTTP 200
         }
 
-        // Handle unauthenticated case, return HTTP 401 Unauthorized
+        // Gère le cas non authentifié, retourne HTTP 401 Unauthorized
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("User is not authenticated via OAuth2");
     }
 }
