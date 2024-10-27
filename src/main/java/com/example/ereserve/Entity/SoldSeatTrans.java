@@ -1,5 +1,6 @@
 package com.example.ereserve.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import java.util.Arrays;
 import java.util.List;
@@ -15,10 +16,14 @@ public class SoldSeatTrans {
 
     @ManyToOne
     @JoinColumn(name = "reservation_trans_id", nullable = false)
+    @JsonBackReference // Prevents infinite recursion
     private ReservationTrans reservationTrans;
 
     @Column(name = "seat_numbers", nullable = false)
-    private String seatNumbers;  // Stocke les numéros de sièges comme une chaîne de caractères
+    private String seatNumbers;  // Stores seat numbers as a string
+
+    @Column(name = "status", nullable = true)
+    private boolean status = false; // Default status is false
 
     // Getters and Setters
     public Long getId() {
@@ -43,6 +48,14 @@ public class SoldSeatTrans {
 
     public void setSeatNumbers(String seatNumbers) {
         this.seatNumbers = seatNumbers;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
     }
 
     // Convert seat numbers to List<Integer> for easier manipulation

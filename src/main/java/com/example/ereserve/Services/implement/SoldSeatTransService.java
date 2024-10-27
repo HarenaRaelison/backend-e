@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SoldSeatTransService {
@@ -59,5 +60,18 @@ public class SoldSeatTransService {
     public List<Integer> getSoldSeatsByReservationId(Long reservationId) {
         List<List<Integer>> seatNumbersList = soldSeatTransRepository.findSeatNumbersByReservationId(reservationId);
         return seatNumbersList.stream().flatMap(List::stream).toList(); // Récupération de tous les sièges vendus
+    }
+
+    public boolean updateStatusToTrue(Long id) {
+        Optional<SoldSeatTrans> soldSeatTransOptional = soldSeatTransRepository.findById(id);
+
+        if (soldSeatTransOptional.isPresent()) {
+            SoldSeatTrans soldSeatTrans = soldSeatTransOptional.get();
+            soldSeatTrans.setStatus(true);
+            soldSeatTransRepository.save(soldSeatTrans);
+            return true;
+        } else {
+            return false;  // Return false if entity not found
+        }
     }
 }
