@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e55690fa-10b1-4d14-a1b4-c07c56452a38" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/SoldSeatTransController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Controllers/SoldSeatTransController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Entity/SoldSeatTrans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Entity/SoldSeatTrans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Services/implement/SoldSeatTransService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Services/implement/SoldSeatTransService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/ereserve/Config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,8 @@
       <workItem from="1729378494393" duration="18728000" />
       <workItem from="1729681929184" duration="44733000" />
       <workItem from="1729926644008" duration="10295000" />
-      <workItem from="1729993679688" duration="18353000" />
+      <workItem from="1729993679688" duration="20615000" />
+      <workItem from="1730090149472" duration="3344000" />
     </task>
     <task id="LOCAL-00001" summary="backend prendre en compte l'application propreties">
       <option name="closed" value="true" />
@@ -206,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730011967209</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="backend prendre en compte l'application propreties">
+      <option name="closed" value="true" />
+      <created>1730051038477</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1730051038477</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
