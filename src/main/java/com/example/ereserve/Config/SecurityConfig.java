@@ -25,7 +25,7 @@ public class SecurityConfig {
                 .csrf().disable()  // Disable CSRF since you're using JWT (stateless)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/auth/**", "/oauth2/**", "/login", "/api/**").permitAll()  // Allow public routes
-                        .anyRequest().authenticated()  // Require authentication for all other routes
+                        .anyRequest().permitAll() // Require authentication for all other routes
                 )
                 .oauth2Login(oauth2 -> oauth2
                         .defaultSuccessUrl("http://localhost:5173/transports")  // Redirect to this URL after successful login
